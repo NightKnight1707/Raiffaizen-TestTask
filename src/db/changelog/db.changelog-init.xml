@@ -1,0 +1,60 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="NightKnight" id="1">
+        <createTable tableName="CAR">
+            <column autoIncrement="true" name="id" type="SERIAL">
+                <constraints nullable="false"/>
+            </column>
+            <column name="color" type="VARCHAR(255)"/>
+            <column name="horse_power" type="INTEGER"/>
+            <column name="quantity" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="NightKnight" id="2">
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="black"/>
+            <column  name="horse_power"  value="220"/>
+            <column  name="quantity"  value="2"/>
+        </insert>
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="black"/>
+            <column  name="horse_power"  value="80"/>
+            <column  name="quantity"  value="20"/>
+        </insert>
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="yellow"/>
+            <column  name="horse_power"  value="80"/>
+            <column  name="quantity"  value="20"/>
+        </insert>
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="black"/>
+            <column  name="horse_power"  value="140"/>
+            <column  name="quantity"  value="11"/>
+        </insert>
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="black"/>
+            <column  name="horse_power"  value="280"/>
+            <column  name="quantity"  value="40"/>
+        </insert>
+        <insert catalogName="Raiffaizen Test"
+                schemaName="public"
+                tableName="CAR">
+            <column  name="color"  value="black"/>
+            <column  name="horse_power"  value="120"/>
+            <column  name="quantity"  value="5"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
